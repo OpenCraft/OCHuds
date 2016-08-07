@@ -1,0 +1,6 @@
+framework module OCHuds {
+  umbrella header "OCHuds-umbrella.h"
+
+  export *
+  module * { export * }
+}

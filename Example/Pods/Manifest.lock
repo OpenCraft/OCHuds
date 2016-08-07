@@ -1,0 +1,16 @@
+PODS:
+  - OCHuds (0.1.0)
+
+DEPENDENCIES:
+  - OCHuds (from `../`)
+
+EXTERNAL SOURCES:
+  OCHuds:
+    :path: ../
+
+SPEC CHECKSUMS:
+  OCHuds: 355df3ddc4caff160b241be8645f6859e62839f8
+
+PODFILE CHECKSUM: 8cd8aacbf62c6be0e047fc4cb47518e9d9ea8e3f
+
+COCOAPODS: 1.0.1
