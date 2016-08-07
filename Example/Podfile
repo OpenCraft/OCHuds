@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OCHuds_Example' do
+  pod 'OCHuds', :path => '../'
+
+  target 'OCHuds_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
