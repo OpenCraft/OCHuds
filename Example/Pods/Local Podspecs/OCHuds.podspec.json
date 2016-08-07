@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "OCHuds/Classes/**/*"
+  "source_files": "OCHuds/Classes/**/*",
+  "dependencies": {
+    "OCExtensions": [
+
+    ]
+  }
 }

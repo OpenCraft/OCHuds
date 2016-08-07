@@ -1,5 +1,7 @@
 PODS:
-  - OCHuds (0.1.0)
+  - OCExtensions (1.0.0)
+  - OCHuds (0.1.0):
+    - OCExtensions
 
 DEPENDENCIES:
   - OCHuds (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  OCHuds: 355df3ddc4caff160b241be8645f6859e62839f8
+  OCExtensions: 9a130cd39e6a019de2c3f67827202b13e3bc2757
+  OCHuds: 4b77f997daef3200f2add3a52cc92c917380369a
 
 PODFILE CHECKSUM: 8cd8aacbf62c6be0e047fc4cb47518e9d9ea8e3f
 

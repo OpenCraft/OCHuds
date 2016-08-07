@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/OCExtensions/OCExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OCHuds/OCHuds.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/OCExtensions/OCExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OCHuds/OCHuds.framework"
 fi

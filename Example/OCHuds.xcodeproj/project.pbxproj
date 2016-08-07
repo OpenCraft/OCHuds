@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DF29BD31D57A30000679771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF29BD01D57A30000679771 /* ViewController.swift */; };
+		2DF29BD41D57A30000679771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF29BD21D57A30000679771 /* Main.storyboard */; };
 		2F1C0F9084993D464B2195F5 /* Pods_OCHuds_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9761B36483A248F11A113E26 /* Pods_OCHuds_Example.framework */; };
 		49BC73E6AC76AD97F43DD6F5 /* Pods_OCHuds_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532CC4393166A88643BCFB73 /* Pods_OCHuds_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -31,6 +31,8 @@
 		18D6003145565E05CF505603 /* Pods-OCHuds_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCHuds_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCHuds_Example/Pods-OCHuds_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1D7FDEE0AF766E35FE1376C6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		20C7B849605EF15E311F1753 /* Pods-OCHuds_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCHuds_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCHuds_Example/Pods-OCHuds_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2DF29BD01D57A30000679771 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../OCHud/Example/OCHud/ViewController.swift; sourceTree = "<group>"; };
+		2DF29BD11D57A30000679771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46DFBB9CB5655973C820EAF8 /* Pods-OCHuds_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCHuds_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCHuds_Tests/Pods-OCHuds_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DD9AC2C5153F826734F541F /* OCHuds.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OCHuds.podspec; path = ../OCHuds.podspec; sourceTree = "<group>"; };
 		50B4AD979BAF02380E123F19 /* Pods-OCHuds_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCHuds_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCHuds_Tests/Pods-OCHuds_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -39,8 +41,6 @@
 		607FACD01AFB9204008FA782 /* OCHuds_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCHuds_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* OCHuds_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCHuds_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				2DF29BD01D57A30000679771 /* ViewController.swift */,
+				2DF29BD21D57A30000679771 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -246,7 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				2DF29BD41D57A30000679771 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -359,7 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				2DF29BD31D57A30000679771 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,12 +383,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		2DF29BD21D57A30000679771 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
+				2DF29BD11D57A30000679771 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../../../OCHud/Example/OCHud;
 			sourceTree = "<group>";
 		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {

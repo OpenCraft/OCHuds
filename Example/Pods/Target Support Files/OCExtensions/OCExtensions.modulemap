@@ -1,0 +1,6 @@
+framework module OCExtensions {
+  umbrella header "OCExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
