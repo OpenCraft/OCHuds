@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func btnShowTouched(sender: AnyObject) {
-        SpinnerHUD.show()
+        SpinnerHUD.show(withDelay: 3.0)
     }
     
     @IBAction func btnHideTouched(sender: AnyObject) {
