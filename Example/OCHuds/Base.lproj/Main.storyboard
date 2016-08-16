@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="OCHud_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="OCHuds_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -31,6 +31,13 @@
                                     <action selector="btnHideTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="M8x-Mw-zE9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyM-bI-YBf">
+                                <rect key="frame" x="107" y="320" width="107" height="30"/>
+                                <state key="normal" title="Show Animated"/>
+                                <connections>
+                                    <action selector="btnShowAnimatedTouch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A3w-0H-Poq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -38,6 +45,8 @@
                             <constraint firstItem="J3L-VN-LjB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5Ez-gb-QvQ"/>
                             <constraint firstItem="J3L-VN-LjB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="5jg-B0-wod"/>
                             <constraint firstItem="C2t-PF-YAf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8gR-IJ-zuh"/>
+                            <constraint firstItem="tyM-bI-YBf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tqk-fe-P2j"/>
+                            <constraint firstItem="tyM-bI-YBf" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="95" id="vXb-QS-mwP"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
