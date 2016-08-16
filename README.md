@@ -1,6 +1,6 @@
 # OCHuds
 
-[![CI Status](http://img.shields.io/travis/Henrique Morbin/OCHuds.svg?style=flat)](https://travis-ci.org/Henrique Morbin/OCHuds)
+[![Build Status](https://www.bitrise.io/app/7ec0bf5890979d97.svg?token=NmBtAaQDDLWCO1EMFy_PMQ&branch=master)](https://www.bitrise.io/app/7ec0bf5890979d97)
 [![Version](https://img.shields.io/cocoapods/v/OCHuds.svg?style=flat)](http://cocoapods.org/pods/OCHuds)
 [![License](https://img.shields.io/cocoapods/l/OCHuds.svg?style=flat)](http://cocoapods.org/pods/OCHuds)
 [![Platform](https://img.shields.io/cocoapods/p/OCHuds.svg?style=flat)](http://cocoapods.org/pods/OCHuds)
