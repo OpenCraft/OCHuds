@@ -14,10 +14,24 @@ class ViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func btnShowTouched(sender: AnyObject) {
-        SpinnerHUD.show(withDelay: 3)
+        SpinnerHUD.show()
     }
     
     @IBAction func btnHideTouched(sender: AnyObject) {
         SpinnerHUD.hide()
+    }
+    
+    @IBAction func btnShowAnimatedTouch(sender: AnyObject) {
+        AnimatedHUD.show(withImages: getImages(), backgroundColor: UIColor.whiteColor(), animationDuration: 1.0)
+    }
+    
+    private final func getImages() -> [UIImage] {
+        var images: [UIImage] = [] 
+        
+        for index in 1...4 {
+            images.append(UIImage(named: "\(index)")!)
+        }
+        
+        return images
     }
 }

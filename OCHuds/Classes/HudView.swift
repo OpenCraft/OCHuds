@@ -58,7 +58,6 @@ internal class HudView: UIView {
         fillSuperview()
     }
     
-    
     func hide() {
         UIApplication.sharedApplication().endIgnoringInteractionEvents()
         
