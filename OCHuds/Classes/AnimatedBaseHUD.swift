@@ -13,11 +13,13 @@ public class AnimatedBaseHUD {
     private static var instance: HudView?
     private static var isHiding = false
     
+    private static let animationDuration = 2.0
+    
     internal class func customHud(withViewController viewController: UIViewController, images: [UIImage], backgroundColor: UIColor, animationDuration: Double) -> HudView? {
         return nil
     }
     
-    public static func show(withImages images: [UIImage], backgroundColor: UIColor = UIColor.whiteColor(), animationDuration: Double = 2.0) -> Bool {
+    public static func show(withImages images: [UIImage], backgroundColor: UIColor = UIColor.whiteColor(), animationDuration: Double = animationDuration) -> Bool {
         if instance != nil {
             return false
         }

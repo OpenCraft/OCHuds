@@ -20,6 +20,11 @@
     "ios": "8.0"
   },
   "source_files": "OCHuds/Classes/**/*",
+  "resource_bundles": {
+    "OCHuds": [
+      "OCHuds/**/*.{storyboard,xib,xcassets,json,imageset,png}"
+    ]
+  },
   "frameworks": "UIKit",
   "dependencies": {
     "OCExtensions": [

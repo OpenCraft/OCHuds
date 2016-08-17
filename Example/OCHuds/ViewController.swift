@@ -25,6 +25,18 @@ class ViewController: UIViewController {
         AnimatedHUD.show(withImages: getImages(), backgroundColor: UIColor.whiteColor(), animationDuration: 1.0)
     }
     
+    @IBAction func btnShowSuccessMessage(sender: AnyObject) {
+        MessageHUD.showSuccess()
+    }
+    
+    @IBAction func btnShowFailureMessage(sender: AnyObject) {
+        MessageHUD.showFailure()
+    }
+    
+    @IBAction func btnShowWarningMessage(sender: AnyObject) {
+        MessageHUD.showWarning(withMessage: "Warning!")
+    }
+    
     private final func getImages() -> [UIImage] {
         var images: [UIImage] = [] 
         

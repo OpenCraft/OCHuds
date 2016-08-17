@@ -12,7 +12,7 @@ internal class SpinnerView: HudView {
     
     var activityIndicator: UIActivityIndicatorView
     
-    override init(withViewController viewController: UIViewController) {
+    init(withViewController viewController: UIViewController) {
         self.activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
         
         super.init(withViewController: viewController)
