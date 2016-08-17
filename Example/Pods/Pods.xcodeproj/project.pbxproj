@@ -28,6 +28,9 @@
 		BC3326F0DF00468F5BBA12AEDD6DBB55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9492708A153D62C1566EE2F016DF2561 /* UIKit.framework */; };
 		BCCE01168F66BEBEDD243D31142AB311 /* Pods-OCHuds_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53826580FBA4D05DA9082B564CD4A7D2 /* Pods-OCHuds_Example-dummy.m */; };
 		BF52C80ACA234F9E2F6725B64EDD3B77 /* OCHuds-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C09F72531A074E015DB01C8CA9C1F41 /* OCHuds-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1013061D649DD00056B9D5 /* MessageBaseHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1013051D649DD00056B9D5 /* MessageBaseHUD.swift */; };
+		DA1013081D64A0130056B9D5 /* MessageHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1013071D64A0130056B9D5 /* MessageHUD.swift */; };
+		DA10130A1D64A05A0056B9D5 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1013091D64A05A0056B9D5 /* MessageView.swift */; };
 		DABFF5361D635B9800D35FD0 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABFF5341D635B8600D35FD0 /* AnimatedView.swift */; };
 		DABFF5391D63709900D35FD0 /* AnimatedHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABFF5371D63708600D35FD0 /* AnimatedHUD.swift */; };
 		DABFF53C1D63752A00D35FD0 /* AnimatedBaseHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABFF53A1D63751100D35FD0 /* AnimatedBaseHUD.swift */; };
@@ -100,6 +103,9 @@
 		C9FA8AF490FF278D572B7DDBAB82AF3C /* OCExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OCExtensions-prefix.pch"; sourceTree = "<group>"; };
 		D0D7E9605FC2E13FD091BD28881441F4 /* OCHuds-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OCHuds-dummy.m"; sourceTree = "<group>"; };
 		D233D09A147F9FBD0CDD3A99AF9EB0CB /* Pods-OCHuds_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OCHuds_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DA1013051D649DD00056B9D5 /* MessageBaseHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBaseHUD.swift; sourceTree = "<group>"; };
+		DA1013071D64A0130056B9D5 /* MessageHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHUD.swift; sourceTree = "<group>"; };
+		DA1013091D64A05A0056B9D5 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		DABFF5341D635B8600D35FD0 /* AnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		DABFF5371D63708600D35FD0 /* AnimatedHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedHUD.swift; sourceTree = "<group>"; };
 		DABFF53A1D63751100D35FD0 /* AnimatedBaseHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedBaseHUD.swift; sourceTree = "<group>"; };
@@ -297,11 +303,22 @@
 		BFE93340D9F4D370680CFD7FC54DF116 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DA1013041D649DAD0056B9D5 /* Message */,
 				DABFF53E1D637E0400D35FD0 /* Animated */,
 				DABFF53D1D637DCE00D35FD0 /* Spinner */,
 				BD600AABEAB0A36BA5391EF923C7CC8E /* HudView.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		DA1013041D649DAD0056B9D5 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				DA1013051D649DD00056B9D5 /* MessageBaseHUD.swift */,
+				DA1013071D64A0130056B9D5 /* MessageHUD.swift */,
+				DA1013091D64A05A0056B9D5 /* MessageView.swift */,
+			);
+			name = Message;
 			sourceTree = "<group>";
 		};
 		DABFF53D1D637DCE00D35FD0 /* Spinner */ = {
@@ -487,8 +504,11 @@
 			files = (
 				BA77F98E779C0B671AF4FDD542F374F2 /* BaseHUD.swift in Sources */,
 				9BB1F54A4C2216576A2371A86C492339 /* HudView.swift in Sources */,
+				DA1013061D649DD00056B9D5 /* MessageBaseHUD.swift in Sources */,
+				DA1013081D64A0130056B9D5 /* MessageHUD.swift in Sources */,
 				2C4812A7B299F336A691EFD7A86DC361 /* OCHuds-dummy.m in Sources */,
 				DABFF5361D635B9800D35FD0 /* AnimatedView.swift in Sources */,
+				DA10130A1D64A05A0056B9D5 /* MessageView.swift in Sources */,
 				5A2AF558A74A2CFEDC58B9847945DBFC /* SpinnerHUD.swift in Sources */,
 				DABFF5391D63709900D35FD0 /* AnimatedHUD.swift in Sources */,
 				36A195524F07BF91D382DCC489F15490 /* SpinnerView.swift in Sources */,

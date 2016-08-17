@@ -22,7 +22,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnShowAnimatedTouch(sender: AnyObject) {
-        AnimatedHUD.show(withImages: getImages(), backgroundColor: UIColor.whiteColor(), animationDuration: 1.0)
+        MessageHUD.showSuccess()
+        
+//        AnimatedHUD.show(withImages: getImages(), backgroundColor: UIColor.whiteColor(), animationDuration: 1.0)
     }
     
     private final func getImages() -> [UIImage] {

@@ -14,14 +14,14 @@ internal class HudView: UIView {
     var viewController: UIViewController
     var centerView: UIView
     
-    init(withViewController viewController: UIViewController) {
+    init(withViewController viewController: UIViewController, viewSize: CGSize?) {
         self.viewController = viewController
         self.centerView = HudView.instantiateCenterView()
         
         super.init(frame: CGRect.zero)
         
         addSubview(centerView)
-        centerView.centerSuperview(withSize: CGSize(width: 80, height: 80))
+        centerView.centerSuperview(withSize: CGSize(width: viewSize?.width ?? 80, height: viewSize?.height ?? 80))
         backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
     }
     
