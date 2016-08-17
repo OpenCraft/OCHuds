@@ -66,7 +66,7 @@ public class MessageBaseHUD {
         show(withStatus: .Regular, message: message, customImage: image)
     }
     
-    public static func showRegular(withMessage message: String) {
+    public static func showMessage(message: String) {
         show(withStatus: .Regular, message: message)
     }
     

@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnShowWarningMessage(sender: AnyObject) {
-        MessageHUD.showWarning(withMessage: "Aviso!")
+        MessageHUD.showWarning(withMessage: "Warning!")
     }
     
     private final func getImages() -> [UIImage] {

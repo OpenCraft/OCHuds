@@ -26,13 +26,13 @@ internal var topMostViewController: UIViewController? {
 
 // TODO: Change to OCExtensions
 internal extension UIView {
-    func centerSuperview(withSize size: CGSize, constantX: CGFloat = 0, constantY: CGFloat = 0) {
+    func centerSuperview(withSize size: CGSize, verticalMargin: CGFloat = 0, horizontalMargin: CGFloat = 0) {
         if let superview = self.superview {
             let subview = self
             subview.translatesAutoresizingMaskIntoConstraints = false
             
-            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .CenterX, relatedBy: .Equal, toItem: superview, attribute: .CenterX, multiplier: 1, constant: constantX))
-            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .CenterY, relatedBy: .Equal, toItem: superview, attribute: .CenterY, multiplier: 1, constant: constantY))
+            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .CenterX, relatedBy: .Equal, toItem: superview, attribute: .CenterX, multiplier: 1, constant: verticalMargin))
+            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .CenterY, relatedBy: .Equal, toItem: superview, attribute: .CenterY, multiplier: 1, constant: horizontalMargin))
             subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.width))
             subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height))
         }

@@ -22,7 +22,7 @@ internal class MessageView: HudView {
         }
         
         centerView.addSubview(imageView)
-        imageView.centerSuperview(withSize: CGSize(width: 35, height: 35), constantY: -10)
+        imageView.centerSuperview(withSize: CGSize(width: 35, height: 35), horizontalMargin: -10)
         imageView.backgroundColor = UIColor.clearColor()
         imageView.contentMode = .ScaleAspectFit
         
@@ -53,7 +53,7 @@ internal class MessageView: HudView {
             return UIImage(named: "failure") ?? UIImage()
         case .Warning:
             return UIImage(named: "warning") ?? UIImage()
-        default:
+        case .Regular:
             return UIImage()
         }
     }
