@@ -14,14 +14,14 @@ internal class HudView: UIView {
     var viewController: UIViewController
     var centerView: UIView
     
-    init(withViewController viewController: UIViewController, viewSize: CGSize?) {
+    init(withViewController viewController: UIViewController, viewSize: CGSize = CGSizeMake(80, 80), hudBackgroundColor: UIColor = UIColor.blackColor()) {
         self.viewController = viewController
-        self.centerView = HudView.instantiateCenterView()
+        self.centerView = HudView.instantiateCenterView(withBackground: hudBackgroundColor)
         
         super.init(frame: CGRect.zero)
         
         addSubview(centerView)
-        centerView.centerSuperview(withSize: CGSize(width: viewSize?.width ?? 80, height: viewSize?.height ?? 80))
+        centerView.centerSuperview(withSize: CGSize(width: viewSize.width, height: viewSize.height))
         backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
     }
     
@@ -29,9 +29,9 @@ internal class HudView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private static func instantiateCenterView() -> UIView {
+    private static func instantiateCenterView(withBackground backgroundColor: UIColor) -> UIView {
         let view = UIView()
-        view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
+        view.backgroundColor = backgroundColor.colorWithAlphaComponent(1.0)
         
         let margin = 5
         let myBezier = UIBezierPath()
@@ -54,13 +54,19 @@ internal class HudView: UIView {
     func show() {
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         
-        viewController.view.addSubview(self)
+        UIView.transitionWithView(viewController.view, duration: 0.6, options: UIViewAnimationOptions.TransitionCrossDissolve,
+                                  animations: {self.viewController.view.addSubview(self)}, completion: nil)
         fillSuperview()
     }
     
     func hide() {
         UIApplication.sharedApplication().endIgnoringInteractionEvents()
         
-        removeFromSuperview()
+        UIView.transitionWithView(self, duration: 0.6, options: .TransitionCrossDissolve, animations: { 
+                self.centerView.alpha = 0.0
+                self.centerView.removeFromSuperview()
+            }) { _ in
+                self.removeFromSuperview()
+        }
     }
 }

@@ -22,11 +22,11 @@ public class MessageBaseHUD {
     
     private static let animationDuration = 2.0
     
-    internal class func customHud(withViewController viewController: UIViewController, status: Status) -> HudView? {
+    internal class func customHud(withViewController viewController: UIViewController, status: Status, message: String?, backgroundColor: UIColor, customImage: UIImage?) -> HudView? {
         return nil
     }
     
-    private static func show(withStatus status: Status, message: String?) -> Bool {
+    private static func show(withStatus status: Status, message: String?, customImage: UIImage? = nil) -> Bool {
         if instance != nil {
             return false
         }
@@ -35,7 +35,7 @@ public class MessageBaseHUD {
             return false
         }
         
-        guard let hudView = customHud(withViewController: topMostViewController, status: status) else {
+        guard let hudView = customHud(withViewController: topMostViewController, status: status, message: message, backgroundColor: UIColor.whiteColor(), customImage: customImage) else {
             return false
         }
         
@@ -60,6 +60,10 @@ public class MessageBaseHUD {
     
     public static func showWarning(withMessage message: String) {
         show(withStatus: .Warning, message: message)
+    }
+    
+    public static func show(withCustomImage image: UIImage, message: String) {
+        show(withStatus: .Regular, message: message, customImage: image)
     }
     
     public static func showRegular(withMessage message: String) {

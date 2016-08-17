@@ -18,7 +18,7 @@ internal class AnimatedView: HudView {
         imageView.animationDuration = animationDuration
         imageView.animationImages = images
         
-        super.init(withViewController: viewController, viewSize: CGSize(width: 80, height: 80))
+        super.init(withViewController: viewController)
         
         centerView.addSubview(imageView)
         centerView.backgroundColor = backgroundColor

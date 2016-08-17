@@ -32,9 +32,9 @@ A bunch of huds: Spinner, Progress, Message and Animated.
 
   s.source_files = 'OCHuds/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'OCHuds' => ['OCHuds/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'OCHuds' => ['OCHuds/**/*.{storyboard,xib,xcassets,json,imageset,png}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'

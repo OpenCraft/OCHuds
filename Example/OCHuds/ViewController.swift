@@ -22,9 +22,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnShowAnimatedTouch(sender: AnyObject) {
+        AnimatedHUD.show(withImages: getImages(), backgroundColor: UIColor.whiteColor(), animationDuration: 1.0)
+    }
+    
+    @IBAction func btnShowSuccessMessage(sender: AnyObject) {
         MessageHUD.showSuccess()
-        
-//        AnimatedHUD.show(withImages: getImages(), backgroundColor: UIColor.whiteColor(), animationDuration: 1.0)
+    }
+    
+    @IBAction func btnShowFailureMessage(sender: AnyObject) {
+        MessageHUD.showFailure()
+    }
+    
+    @IBAction func btnShowWarningMessage(sender: AnyObject) {
+        MessageHUD.showWarning(withMessage: "Aviso!")
     }
     
     private final func getImages() -> [UIImage] {

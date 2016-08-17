@@ -38,14 +38,55 @@
                                     <action selector="btnShowAnimatedTouch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A3w-0H-Poq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqF-9a-9nI">
+                                <rect key="frame" x="25" y="367" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CFw-be-isc"/>
+                                    <constraint firstAttribute="width" constant="57" id="U0d-Ea-NLP"/>
+                                </constraints>
+                                <state key="normal" title="Warning"/>
+                                <connections>
+                                    <action selector="btnShowWarningMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CEt-o6-Vtr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQD-N3-AW8">
+                                <rect key="frame" x="244" y="367" width="45" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="I0A-Cc-4Sk"/>
+                                    <constraint firstAttribute="height" constant="30" id="pTm-8Y-8Pj"/>
+                                </constraints>
+                                <state key="normal" title="Failure"/>
+                                <connections>
+                                    <action selector="btnShowFailureMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PKl-ul-ycj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaS-LU-8mx">
+                                <rect key="frame" x="115" y="367" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Hze-pS-INQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="yD8-xa-bz8"/>
+                                </constraints>
+                                <state key="normal" title="Success"/>
+                                <connections>
+                                    <action selector="btnShowSuccessMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="epK-AW-wCl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C2t-PF-YAf" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-100" id="1q3-mq-7a5"/>
+                            <constraint firstItem="DQD-N3-AW8" firstAttribute="centerY" secondItem="MaS-LU-8mx" secondAttribute="centerY" id="2UO-7H-sUX"/>
                             <constraint firstItem="J3L-VN-LjB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5Ez-gb-QvQ"/>
                             <constraint firstItem="J3L-VN-LjB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="5jg-B0-wod"/>
+                            <constraint firstItem="QqF-9a-9nI" firstAttribute="centerY" secondItem="MaS-LU-8mx" secondAttribute="centerY" id="8ew-AX-4qc"/>
                             <constraint firstItem="C2t-PF-YAf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8gR-IJ-zuh"/>
+                            <constraint firstItem="MaS-LU-8mx" firstAttribute="leading" secondItem="QqF-9a-9nI" secondAttribute="trailing" constant="33" id="HRM-SK-33A"/>
+                            <constraint firstItem="QqF-9a-9nI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="25" id="LWL-Mw-uaa"/>
+                            <constraint firstItem="MaS-LU-8mx" firstAttribute="centerX" secondItem="tyM-bI-YBf" secondAttribute="centerX" id="cuD-6u-wxi"/>
+                            <constraint firstAttribute="trailing" secondItem="DQD-N3-AW8" secondAttribute="trailing" constant="31" id="fy7-Wu-xO1"/>
+                            <constraint firstItem="MaS-LU-8mx" firstAttribute="top" secondItem="tyM-bI-YBf" secondAttribute="bottom" constant="17" id="kqz-Bs-eG5"/>
                             <constraint firstItem="tyM-bI-YBf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tqk-fe-P2j"/>
+                            <constraint firstItem="DQD-N3-AW8" firstAttribute="leading" secondItem="MaS-LU-8mx" secondAttribute="trailing" constant="39" id="v9B-GG-VkL"/>
                             <constraint firstItem="tyM-bI-YBf" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="95" id="vXb-QS-mwP"/>
                         </constraints>
                     </view>
@@ -53,6 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="375" y="450"/>
         </scene>
     </scenes>
 </document>
