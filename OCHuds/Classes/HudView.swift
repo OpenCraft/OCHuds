@@ -16,7 +16,7 @@ internal class HudView: UIView {
     
     init(withViewController viewController: UIViewController, viewSize: CGSize = CGSizeMake(80, 80), hudBackgroundColor: UIColor = UIColor.blackColor()) {
         self.viewController = viewController
-        self.centerView = HudView.instantiateCenterView(withBackground: hudBackgroundColor)
+        self.centerView = HudView.instantiateCenterView(withBackground: hudBackgroundColor, viewSize: viewSize)
         
         super.init(frame: CGRect.zero)
         
@@ -29,16 +29,16 @@ internal class HudView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private static func instantiateCenterView(withBackground backgroundColor: UIColor) -> UIView {
+    private static func instantiateCenterView(withBackground backgroundColor: UIColor, viewSize: CGSize) -> UIView {
         let view = UIView()
         view.backgroundColor = backgroundColor.colorWithAlphaComponent(1.0)
         
-        let margin = 5
+        let margin: CGFloat = 5.0
         let myBezier = UIBezierPath()
         myBezier.moveToPoint(CGPoint(x: -margin, y: -margin))
-        myBezier.addLineToPoint(CGPoint(x: 80 + margin, y: -margin))
-        myBezier.addLineToPoint(CGPoint(x: 80 + margin, y: 80 + margin))
-        myBezier.addLineToPoint(CGPoint(x: -margin, y: 80 + margin))
+        myBezier.addLineToPoint(CGPoint(x: viewSize.width + margin, y: -margin))
+        myBezier.addLineToPoint(CGPoint(x: viewSize.width + margin, y: viewSize.height + margin))
+        myBezier.addLineToPoint(CGPoint(x: -margin, y: viewSize.height + margin))
         myBezier.closePath()
         
         view.layer.shadowPath = myBezier.CGPath
@@ -50,7 +50,7 @@ internal class HudView: UIView {
         view.layer.cornerRadius = 10
         return view
     }
-    
+
     func show() {
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         
