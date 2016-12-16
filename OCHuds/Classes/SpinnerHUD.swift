@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SpinnerHUD: BaseHUD {
+open class SpinnerHUD: BaseHUD {
     internal override class func customHud(withViewController viewController: UIViewController) -> HudView? {
         return SpinnerView(withViewController: viewController)
     }
@@ -16,7 +16,7 @@ public class SpinnerHUD: BaseHUD {
 
 // TODO: Change to OCExtensions
 internal var topMostViewController: UIViewController? {
-    var topMost = UIApplication.sharedApplication().keyWindow?.rootViewController
+    var topMost = UIApplication.shared.keyWindow?.rootViewController
     while let presented = topMost?.presentedViewController {
         topMost = presented
     }
@@ -31,10 +31,10 @@ internal extension UIView {
             let subview = self
             subview.translatesAutoresizingMaskIntoConstraints = false
             
-            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .CenterX, relatedBy: .Equal, toItem: superview, attribute: .CenterX, multiplier: 1, constant: verticalMargin))
-            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .CenterY, relatedBy: .Equal, toItem: superview, attribute: .CenterY, multiplier: 1, constant: horizontalMargin))
-            subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.width))
-            subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height))
+            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .centerX, relatedBy: .equal, toItem: superview, attribute: .centerX, multiplier: 1, constant: verticalMargin))
+            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .centerY, relatedBy: .equal, toItem: superview, attribute: .centerY, multiplier: 1, constant: horizontalMargin))
+            subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.width))
+            subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.height))
         }
     }
     
@@ -43,10 +43,10 @@ internal extension UIView {
             let subview = self
             subview.translatesAutoresizingMaskIntoConstraints = false
             
-            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .CenterX, relatedBy: .Equal, toItem: superview, attribute: .CenterX, multiplier: 1, constant: 0))
-            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Bottom, relatedBy: .Equal, toItem: superview, attribute: .Bottom, multiplier: 1, constant: -10))
-            subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.width))
-            subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height))
+            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .centerX, relatedBy: .equal, toItem: superview, attribute: .centerX, multiplier: 1, constant: 0))
+            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .bottom, relatedBy: .equal, toItem: superview, attribute: .bottom, multiplier: 1, constant: -10))
+            subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.width))
+            subview.addConstraint(NSLayoutConstraint(item: subview, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.height))
         }
     }
 }

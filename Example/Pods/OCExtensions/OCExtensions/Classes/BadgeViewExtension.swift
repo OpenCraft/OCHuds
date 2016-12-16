@@ -19,11 +19,11 @@ public extension UIView {
             return self.badgeCount
         }
         set {
-            guard let newValue = newValue where newValue > 0 else {
-                badgeInstance.hidden = true
+            guard let newValue = newValue, newValue > 0 else {
+                badgeInstance.isHidden = true
                 return
             }
-            badgeInstance.hidden = false
+            badgeInstance.isHidden = false
             badgeInstance.text = "\(newValue)"
         }
     }
@@ -46,17 +46,17 @@ public extension UIView {
         }
     }
     
-    private var badgeInstance: UILabel {
+    fileprivate var badgeInstance: UILabel {
         get {
             guard let badge = self.viewWithTag(tagIdentifier) as? UILabel else {
                 let badge = UILabel(frame: CGRect(x: 0, y: 0, width: defaultBadgeSize, height: defaultBadgeSize))
                 
                 badge.tag = tagIdentifier
                 badge.text = ""
-                badge.backgroundColor = UIColor.redColor()
-                badge.textColor = UIColor.whiteColor()
-                badge.font = UIFont.systemFontOfSize(defaultBadgeSize/2)
-                badge.textAlignment = .Center
+                badge.backgroundColor = UIColor.red
+                badge.textColor = UIColor.white
+                badge.font = UIFont.systemFont(ofSize: defaultBadgeSize/2)
+                badge.textAlignment = .center
                 badge.layer.cornerRadius = defaultBadgeSize/2
                 badge.layer.masksToBounds = true
                 badge.adjustsFontSizeToFitWidth = true
@@ -74,15 +74,15 @@ public extension UIView {
 }
 
 private extension UILabel {
-    func updateSize(newSize: CGFloat) {
+    func updateSize(_ newSize: CGFloat) {
         let center = self.center
         self.frame = CGRect(x: 0, y: 0, width: newSize, height: newSize)
         self.center = center
         self.layer.cornerRadius = newSize/2
-        self.font = UIFont.systemFontOfSize(newSize/2)
+        self.font = UIFont.systemFont(ofSize: newSize/2)
     }
     
-    func updateOffset(newOffset: CGPoint) {
-        self.frame.offsetInPlace(dx: newOffset.x, dy: newOffset.y)
+    func updateOffset(_ newOffset: CGPoint) {
+        frame = frame.offsetBy(dx: newOffset.x, dy: newOffset.y)
     }
 }

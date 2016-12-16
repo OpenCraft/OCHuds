@@ -10,8 +10,8 @@ import UIKit
 
 public extension UIView {
     
-    public static func loadFromNibNamed(nibNamed: String, bundle: NSBundle? = nil) -> UIView? {
-        return UINib(nibName: nibNamed, bundle: bundle).instantiateWithOwner(nil, options: nil)[0] as? UIView
+    public static func loadFromNibNamed(_ nibNamed: String, bundle: Bundle? = nil) -> UIView? {
+        return UINib(nibName: nibNamed, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
     }
     
     public func fillSuperview() {
@@ -19,19 +19,19 @@ public extension UIView {
             let subview = self
             subview.translatesAutoresizingMaskIntoConstraints = false
             
-            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Top, relatedBy: .Equal, toItem: superview, attribute: .Top,
+            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .top, relatedBy: .equal, toItem: superview, attribute: .top,
                 multiplier: 1.0, constant: 0.0))
-            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .Leading, relatedBy: .Equal, toItem: superview, attribute: .Leading,
+            superview.addConstraint(NSLayoutConstraint(item: subview, attribute: .leading, relatedBy: .equal, toItem: superview, attribute: .leading,
                 multiplier: 1.0, constant: 0.0))
-            superview.addConstraint(NSLayoutConstraint(item: superview, attribute: .Bottom, relatedBy: .Equal, toItem: subview, attribute: .Bottom,
+            superview.addConstraint(NSLayoutConstraint(item: superview, attribute: .bottom, relatedBy: .equal, toItem: subview, attribute: .bottom,
                 multiplier: 1.0, constant: 0.0))
-            superview.addConstraint(NSLayoutConstraint(item: superview, attribute: .Trailing, relatedBy: .Equal, toItem: subview, attribute: .Trailing,
+            superview.addConstraint(NSLayoutConstraint(item: superview, attribute: .trailing, relatedBy: .equal, toItem: subview, attribute: .trailing,
                 multiplier: 1.0, constant: 0.0))
         }
     }
     
     public func fill(inSuperview superview: UIView) {
-        if superview.subviews.indexOf(self) == nil {
+        if superview.subviews.index(of: self) == nil {
             superview.addSubview(self)
         }
         

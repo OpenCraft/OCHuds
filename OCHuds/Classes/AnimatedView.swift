@@ -23,8 +23,8 @@ internal class AnimatedView: HudView {
         centerView.addSubview(imageView)
         centerView.backgroundColor = backgroundColor
         imageView.centerSuperview(withSize: CGSize(width: 40, height: 40))
-        imageView.backgroundColor = UIColor.clearColor()
-        imageView.contentMode = .ScaleAspectFit
+        imageView.backgroundColor = UIColor.clear
+        imageView.contentMode = .scaleAspectFit
         imageView.startAnimating()
     }
     

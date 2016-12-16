@@ -8,18 +8,19 @@
 
 import UIKit
 
-public class AnimatedBaseHUD {
+open class AnimatedBaseHUD {
     
-    private static var instance: HudView?
-    private static var isHiding = false
+    fileprivate static var instance: HudView?
+    fileprivate static var isHiding = false
     
-    private static let animationDuration = 2.0
+    fileprivate static let animationDuration = 2.0
     
     internal class func customHud(withViewController viewController: UIViewController, images: [UIImage], backgroundColor: UIColor, animationDuration: Double) -> HudView? {
         return nil
     }
     
-    public static func show(withImages images: [UIImage], backgroundColor: UIColor = UIColor.whiteColor(), animationDuration: Double = animationDuration) -> Bool {
+    @discardableResult
+    open static func show(withImages images: [UIImage], backgroundColor: UIColor = UIColor.white, animationDuration: Double = animationDuration) -> Bool {
         if instance != nil {
             return false
         }
@@ -38,7 +39,8 @@ public class AnimatedBaseHUD {
         return true
     }
     
-    public static func hide() -> Bool {
+    @discardableResult
+    open static func hide() -> Bool {
         guard let instance = instance else {
             return false
         }
@@ -49,10 +51,10 @@ public class AnimatedBaseHUD {
         
         isHiding = true
         
-        if NSThread.currentThread().isMainThread {
+        if Thread.current.isMainThread {
             instance.hide()
         } else {
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 instance.hide()
             }
         }

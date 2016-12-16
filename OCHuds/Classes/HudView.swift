@@ -14,7 +14,7 @@ internal class HudView: UIView {
     var viewController: UIViewController
     var centerView: UIView
     
-    init(withViewController viewController: UIViewController, viewSize: CGSize = CGSizeMake(80, 80), hudBackgroundColor: UIColor = UIColor.blackColor()) {
+    init(withViewController viewController: UIViewController, viewSize: CGSize = CGSize(width: 80, height: 80), hudBackgroundColor: UIColor = UIColor.black) {
         self.viewController = viewController
         self.centerView = HudView.instantiateCenterView(withBackground: hudBackgroundColor, viewSize: viewSize)
         
@@ -22,29 +22,29 @@ internal class HudView: UIView {
         
         addSubview(centerView)
         centerView.centerSuperview(withSize: CGSize(width: viewSize.width, height: viewSize.height))
-        backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
+        backgroundColor = UIColor.black.withAlphaComponent(0.2)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private static func instantiateCenterView(withBackground backgroundColor: UIColor, viewSize: CGSize) -> UIView {
+    fileprivate static func instantiateCenterView(withBackground backgroundColor: UIColor, viewSize: CGSize) -> UIView {
         let view = UIView()
-        view.backgroundColor = backgroundColor.colorWithAlphaComponent(1.0)
+        view.backgroundColor = backgroundColor.withAlphaComponent(1.0)
         
         let margin: CGFloat = 5.0
         let myBezier = UIBezierPath()
-        myBezier.moveToPoint(CGPoint(x: -margin, y: -margin))
-        myBezier.addLineToPoint(CGPoint(x: viewSize.width + margin, y: -margin))
-        myBezier.addLineToPoint(CGPoint(x: viewSize.width + margin, y: viewSize.height + margin))
-        myBezier.addLineToPoint(CGPoint(x: -margin, y: viewSize.height + margin))
-        myBezier.closePath()
+        myBezier.move(to: CGPoint(x: -margin, y: -margin))
+        myBezier.addLine(to: CGPoint(x: viewSize.width + margin, y: -margin))
+        myBezier.addLine(to: CGPoint(x: viewSize.width + margin, y: viewSize.height + margin))
+        myBezier.addLine(to: CGPoint(x: -margin, y: viewSize.height + margin))
+        myBezier.close()
         
-        view.layer.shadowPath = myBezier.CGPath
+        view.layer.shadowPath = myBezier.cgPath
         view.layer.masksToBounds = false
-        view.layer.shadowColor = UIColor.blackColor().CGColor
-        view.layer.shadowOffset = CGSizeMake(0, 0)
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shadowRadius = 15
         view.layer.shadowOpacity = 0.5
         view.layer.cornerRadius = 10
@@ -52,17 +52,17 @@ internal class HudView: UIView {
     }
 
     func show() {
-        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        UIApplication.shared.beginIgnoringInteractionEvents()
         
-        UIView.transitionWithView(viewController.view, duration: 0.6, options: UIViewAnimationOptions.TransitionCrossDissolve,
+        UIView.transition(with: viewController.view, duration: 0.6, options: UIViewAnimationOptions.transitionCrossDissolve,
                                   animations: {self.viewController.view.addSubview(self)}, completion: nil)
         fillSuperview()
     }
     
     func hide() {
-        UIApplication.sharedApplication().endIgnoringInteractionEvents()
+        UIApplication.shared.endIgnoringInteractionEvents()
         
-        UIView.transitionWithView(self, duration: 0.6, options: .TransitionCrossDissolve, animations: { 
+        UIView.transition(with: self, duration: 0.6, options: .transitionCrossDissolve, animations: { 
                 self.centerView.alpha = 0.0
                 self.centerView.removeFromSuperview()
             }) { _ in

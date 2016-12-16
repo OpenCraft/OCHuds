@@ -13,31 +13,31 @@ class ViewController: UIViewController {
     
     // MARK: Actions
     
-    @IBAction func btnShowTouched(sender: AnyObject) {
+    @IBAction func btnShowTouched(_ sender: AnyObject) {
         SpinnerHUD.show(withDelay: 3.0)
     }
     
-    @IBAction func btnHideTouched(sender: AnyObject) {
+    @IBAction func btnHideTouched(_ sender: AnyObject) {
         SpinnerHUD.hide()
     }
     
-    @IBAction func btnShowAnimatedTouch(sender: AnyObject) {
-        AnimatedHUD.show(withImages: getImages(), backgroundColor: UIColor.whiteColor(), animationDuration: 1.0)
+    @IBAction func btnShowAnimatedTouch(_ sender: AnyObject) {
+        AnimatedHUD.show(withImages: getImages(), backgroundColor: UIColor.white, animationDuration: 1.0)
     }
     
-    @IBAction func btnShowSuccessMessage(sender: AnyObject) {
+    @IBAction func btnShowSuccessMessage(_ sender: AnyObject) {
         MessageHUD.showSuccess()
     }
     
-    @IBAction func btnShowFailureMessage(sender: AnyObject) {
+    @IBAction func btnShowFailureMessage(_ sender: AnyObject) {
         MessageHUD.showFailure()
     }
     
-    @IBAction func btnShowWarningMessage(sender: AnyObject) {
+    @IBAction func btnShowWarningMessage(_ sender: AnyObject) {
         MessageHUD.showWarning(withMessage: "Warning!")
     }
     
-    private final func getImages() -> [UIImage] {
+    fileprivate final func getImages() -> [UIImage] {
         var images: [UIImage] = [] 
         
         for index in 1...4 {

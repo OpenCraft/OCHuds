@@ -23,16 +23,16 @@ internal class MessageView: HudView {
         
         centerView.addSubview(imageView)
         imageView.centerSuperview(withSize: CGSize(width: 35, height: 35), horizontalMargin: -10)
-        imageView.backgroundColor = UIColor.clearColor()
-        imageView.contentMode = .ScaleAspectFit
+        imageView.backgroundColor = UIColor.clear
+        imageView.contentMode = .scaleAspectFit
         
         let label = UILabel()
         centerView.addSubview(label)
         label.baseSuperview(withSize: CGSize(width: 80, height: 20))
-        label.textAlignment = .Center
-        label.textColor = UIColor.blackColor()
+        label.textAlignment = .center
+        label.textColor = UIColor.black
         label.minimumScaleFactor = 8.0
-        label.font = label.font.fontWithSize(12.0)
+        label.font = label.font.withSize(12.0)
         
         if let message = message {
             label.text = message
@@ -45,24 +45,24 @@ internal class MessageView: HudView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private final func getImage(fromStatus status: Status) -> UIImage {
+    fileprivate final func getImage(fromStatus status: Status) -> UIImage {
         switch status {
-        case .Success:
+        case .success:
             return UIImage(named: "success") ?? UIImage()
-        case .Failure:
+        case .failure:
             return UIImage(named: "failure") ?? UIImage()
-        case .Warning:
+        case .warning:
             return UIImage(named: "warning") ?? UIImage()
-        case .Regular:
+        case .regular:
             return UIImage()
         }
     }
     
-    private final func getMessageTextBasedOnStatus(status: Status) -> String {
+    fileprivate final func getMessageTextBasedOnStatus(_ status: Status) -> String {
         switch status {
-        case .Success:
+        case .success:
             return "Success"
-        case .Failure:
+        case .failure:
             return "Failure"
         default:
             return ""

@@ -8,16 +8,17 @@
 
 import UIKit
 
-public class BaseHUD {
+open class BaseHUD {
     
-    private static var instance: HudView?
-    private static var isHiding = false
+    fileprivate static var instance: HudView?
+    fileprivate static var isHiding = false
     
     internal class func customHud(withViewController viewController: UIViewController) -> HudView? {
         return nil
     }
     
-    public static func show() -> Bool {
+    @discardableResult
+    open static func show() -> Bool {
         if instance != nil {
             return false
         }
@@ -36,17 +37,19 @@ public class BaseHUD {
         return true
     }
     
-    public static func show(withDelay seconds: Double) -> Bool {
+    @discardableResult
+    open static func show(withDelay seconds: Double) -> Bool {
         let result = show()
         
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue()) { _ in
+        let time = DispatchTime.now() + Double(Int64(seconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time) { _ in
             hide()
         }
         return result
     }
     
-    public static func hide() -> Bool {
+    @discardableResult
+    open static func hide() -> Bool {
         guard let instance = instance else {
             return false
         }
@@ -57,10 +60,10 @@ public class BaseHUD {
         
         isHiding = true
         
-        if NSThread.currentThread().isMainThread {
+        if Thread.current.isMainThread {
             instance.hide()
         } else {
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 instance.hide()
             }
         }

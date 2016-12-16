@@ -13,13 +13,13 @@ internal class SpinnerView: HudView {
     var activityIndicator: UIActivityIndicatorView
     
     init(withViewController viewController: UIViewController) {
-        self.activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        self.activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
         
         super.init(withViewController: viewController)
         
         centerView.addSubview(activityIndicator)
         activityIndicator.centerSuperview(withSize: CGSize(width: 40, height: 40))
-        activityIndicator.color = UIColor.whiteColor()
+        activityIndicator.color = UIColor.white
         activityIndicator.startAnimating()
     }
     
