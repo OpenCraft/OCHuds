@@ -1,6 +1,0 @@
-framework module Pods_OCHuds_Example {
-  umbrella header "Pods-OCHuds_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
