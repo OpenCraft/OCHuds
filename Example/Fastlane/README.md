@@ -5,16 +5,6 @@ fastlane documentation
 sudo gem install fastlane
 ```
 # Available Actions
-### run_gym
-```
-fastlane run_gym
-```
-
-### slack_notification
-```
-fastlane slack_notification
-```
-
 ### development_keys
 ```
 fastlane development_keys
