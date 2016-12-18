@@ -530,6 +530,9 @@
 					5AA432960C3216C9B22560BE2503D8A0 = {
 						LastSwiftMigration = 0810;
 					};
+					A91AD1268529CC1CBE7E1295FF6FCF77 = {
+						LastSwiftMigration = 0800;
+					};
 					BE3EAB649AB5C4EEFFFA946636D175AB = {
 						LastSwiftMigration = 0810;
 					};
@@ -786,6 +789,7 @@
 				PRODUCT_NAME = Pods_OCHuds_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1026,6 +1030,7 @@
 				PRODUCT_NAME = Pods_OCHuds_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
