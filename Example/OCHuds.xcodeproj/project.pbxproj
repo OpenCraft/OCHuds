@@ -33,6 +33,7 @@
 		20C7B849605EF15E311F1753 /* Pods-OCHuds_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCHuds_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCHuds_Example/Pods-OCHuds_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2D0F13A61D57A601009644A0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D0F13A91D57A60D009644A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D583C7A1E072065002A11C0 /* Fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fastlane; sourceTree = "<group>"; };
 		46DFBB9CB5655973C820EAF8 /* Pods-OCHuds_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCHuds_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCHuds_Tests/Pods-OCHuds_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DD9AC2C5153F826734F541F /* OCHuds.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OCHuds.podspec; path = ../OCHuds.podspec; sourceTree = "<group>"; };
 		50B4AD979BAF02380E123F19 /* Pods-OCHuds_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCHuds_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCHuds_Tests/Pods-OCHuds_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 				4DD9AC2C5153F826734F541F /* OCHuds.podspec */,
 				5E624E3187C5C9C1E34D16C2 /* README.md */,
 				1D7FDEE0AF766E35FE1376C6 /* LICENSE */,
+				2D583C7A1E072065002A11C0 /* Fastlane */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -217,7 +219,7 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = U4D7MD5WUL;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -501,16 +503,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Guttler Morbin (2956PC67A3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Henrique Guttler Morbin (2956PC67A3)";
 				DEVELOPMENT_TEAM = U4D7MD5WUL;
 				INFOPLIST_FILE = OCHuds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "17a07f2a-f957-49b7-a0b8-f7ea047e1bd3";
+				PROVISIONING_PROFILE_SPECIFIER = "org.cocoapods.demo.OCHuds-Example Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -521,16 +523,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Guttler Morbin (2956PC67A3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Henrique Guttler Morbin (2956PC67A3)";
 				DEVELOPMENT_TEAM = U4D7MD5WUL;
 				INFOPLIST_FILE = OCHuds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "17a07f2a-f957-49b7-a0b8-f7ea047e1bd3";
+				PROVISIONING_PROFILE_SPECIFIER = "org.cocoapods.demo.OCHuds-Example Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -1,0 +1,46 @@
+# More documentation about how to customize your build
+# can be found here:
+# https://docs.fastlane.tools
+fastlane_version "2.0.3"
+
+default_platform :ios
+
+lane :run_gym do
+  increment_build_number
+  gym(
+    clean: true,
+    use_legacy_build_api: true,
+    # export_method: "ad-hoc", # Valid values are: app-store, ad-hoc, package, enterprise, development, developer-id
+    verbose: false,
+    configuration: "Debug",
+    scheme: "OCHuds_Example",
+    # provisioning_profile_path: "Fastlane/Certificates"
+    codesigning_identity: "iPhone Developer: Henrique Guttler Morbin (2956PC67A3)",
+    # codesigning_identity: "iPhone Distribution: Porto Seguro S.A. (W2ZNQR4GWX)"
+  )
+end
+
+lane :slack_notification do
+  slack(
+    # slack_url: "https://hooks.slack.com/services/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"
+  )
+end
+
+lane :development_keys do
+  cert(
+      development: true, # Development x Production
+      output_path: "./Fastlane/Certificates",
+      username: "morbin_@hotmail.com",
+      team_id: "U4D7MD5WUL",
+      # force: true,
+  )
+  sigh(
+      force: true,
+      output_path: "./Fastlane/Certificates",
+      development: true, # Development x Production
+      app_identifier: "org.cocoapods.demo.OCHuds-Example",
+      username: "morbin_@hotmail.com",
+      team_id: "U4D7MD5WUL",
+      # skip_install: true, # para não instalar
+  )
+end
