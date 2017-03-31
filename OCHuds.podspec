@@ -38,5 +38,5 @@ A bunch of huds: Spinner, Progress, Message and Animated.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'OCExtensions'
+# s.dependency 'OCExtensions'
 end

@@ -1,19 +1,16 @@
 PODS:
-  - OCExtensions (1.3.0)
-  - OCHuds (1.3.0):
-    - OCExtensions
+  - OCHuds (1.3.0)
 
 DEPENDENCIES:
   - OCHuds (from `../`)
 
 EXTERNAL SOURCES:
   OCHuds:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  OCExtensions: 36870eb8e3173f9fb4431f3fdcda52c06faa03e3
-  OCHuds: d090c159e05984be520d65e1eaa5cb44f42c41f9
+  OCHuds: a4cad73a6097194f33826932243ce6769d2b24b9
 
 PODFILE CHECKSUM: 8cd8aacbf62c6be0e047fc4cb47518e9d9ea8e3f
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
